@@ -13,9 +13,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -31,9 +29,6 @@ body{
 background:#f6fff3;
 color:#333;
 }
-
-
-/* HEADER */
 
 header{
 background:#063b1b;
@@ -66,6 +61,12 @@ color:#d4af37;
 font-size:25px;
 }
 
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
 nav a{
 color:white;
 text-decoration:none;
@@ -78,32 +79,20 @@ nav a:hover{
 color:#d4af37;
 }
 
-
-/* HERO */
-
 .hero{
-
 height:85vh;
-
 background:
-linear-gradient(
-rgba(0,0,0,.55),
-rgba(0,0,0,.55)
-),
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
 url("farm1.jpg");
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-
 color:white;
 padding:20px;
-
 }
 
 .hero h2{
@@ -116,9 +105,7 @@ font-size:22px;
 margin:15px 0;
 }
 
-
 .btn{
-
 display:inline-block;
 padding:14px 35px;
 border-radius:30px;
@@ -126,7 +113,6 @@ text-decoration:none;
 font-weight:bold;
 margin:10px;
 transition:.3s;
-
 }
 
 .gold{
@@ -143,59 +129,61 @@ color:white;
 transform:translateY(-5px);
 }
 
-
-/* SECTION */
-
 section{
 padding:70px 8%;
 }
 
 .title{
-
 text-align:center;
 font-size:38px;
 color:#063b1b;
 margin-bottom:40px;
-
 }
 
 .title span{
 color:#d4af37;
 }
 
-
-/* GALLERY FULL WIDTH */
-
 .gallery{
-
 display:flex;
 flex-direction:column;
-gap:25px;
-
+gap:35px;
 }
 
 .gallery img{
-
 width:100%;
-height:500px;
+height:90vh;
 object-fit:cover;
-border-radius:0;
-box-shadow:0 8px 20px #0003;
-transition:.4s;
-
+display:block;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:0.4s;
 }
 
 .gallery img:hover{
-
-transform:scale(1.03);
-
+transform:scale(1.02);
 }
 
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-/* MOBILE */
+.card{
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+transition:.3s;
+}
 
-@media(max-width:700px){
+.card:hover{
+transform:translateY(-8px);
+}
 
+@media(max-width:768px){
 header{
 flex-direction:column;
 }
@@ -209,166 +197,89 @@ margin:8px;
 }
 
 .gallery img{
-height:300px;
+height:55vh;
 }
-
 }
-
 </style>
 
 </head>
-
-
 <body>
 
-
 <header>
-
 <div class="logo">
-
-<img src="logo.jpg">
-
+<img src="logo.jpg" alt="Virk Zarai Farm Logo">
 <h1>Virk Zarai Farm</h1>
-
 </div>
 
-
 <nav>
-
 <a href="#home">Home</a>
 <a href="#gallery">Gallery</a>
 <a href="#services">Services</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-
 </nav>
-
 </header>
 
-
-
 <div class="hero" id="home">
-
 <h2>Virk Zarai Farm</h2>
-
 <p>Growing Quality • Harvesting Trust</p>
-
 
 <a class="btn gold" href="#gallery">
 Explore Farm
 </a>
 
-
 <a class="btn green" href="#contact">
 Contact Us
 </a>
-
 </div>
 
-
-
-
-<!-- GALLERY -->
-
 <section id="gallery">
-
 <h2 class="title">
 Farm <span>Gallery</span>
 </h2>
 
-
 <div class="gallery">
-
-
 <img src="farm1.jpg" alt="Farm Image">
-
 <img src="farm2.JPG" alt="Farm Image">
-
 <img src="farm3.JPG" alt="Farm Image">
-
 <img src="farm4.jpg" alt="Farm Image">
-
 <img src="farm5.jpg" alt="Farm Image">
-
 <img src="farm6.JPG" alt="Farm Image">
-
-
 </div>
-
-
-</section> <!-- FARM SERVICES -->
+</section>
 
 <section id="services">
-
 <h2 class="title">
 Our <span>Services</span>
 </h2>
 
-
 <div class="cards">
-
-
 <div class="card">
-
 <h3>🌾 Crop Production</h3>
-
-<p>
-Quality crop cultivation with proper care and modern techniques.
-</p>
-
+<p>Quality crop cultivation with proper care and modern techniques.</p>
 </div>
 
-
-
 <div class="card">
-
 <h3>🚜 Modern Agriculture</h3>
-
-<p>
-Using improved farming methods for better results and productivity.
-</p>
-
+<p>Using improved farming methods for better results and productivity.</p>
 </div>
 
-
-
 <div class="card">
-
 <h3>🌱 Healthy Farming</h3>
-
-<p>
-Focused on clean, quality and sustainable agricultural practices.
-</p>
-
+<p>Focused on clean, quality and sustainable agricultural practices.</p>
 </div>
-
-
 
 <div class="card">
-
 <h3>⭐ Farm Management</h3>
-
-<p>
-Professional planning and attention at every stage of farming.
-</p>
-
+<p>Professional planning and attention at every stage of farming.</p>
 </div>
-
-
 </div>
-
 </section>
 
-
-
-<!-- ABOUT SECTION -->
-
 <section id="about">
-
 <h2 class="title">
 About <span>Our Farm</span>
 </h2>
-
 
 <p style="
 text-align:center;
@@ -377,75 +288,44 @@ margin:auto;
 font-size:19px;
 line-height:2;
 ">
-
-Welcome to <b>Virk Zarai Farm</b>.  
+Welcome to <b>Virk Zarai Farm</b>.
 We are committed to producing healthy and high-quality crops through modern farming practices.
 Our mission is to provide quality agricultural products while maintaining honesty,
 hard work and sustainable farming methods.
-
 </p>
-
-</section>
-
-
-
-
-<!-- FARM HIGHLIGHTS -->
+</section> <!-- FARM HIGHLIGHTS -->
 
 <section class="stats">
 
-
 <div class="stat">
-
 <h2>🌾</h2>
-
 <p>Quality Crops</p>
-
 </div>
 
-
 <div class="stat">
-
 <h2>🚜</h2>
-
 <p>Modern Equipment</p>
-
 </div>
 
-
 <div class="stat">
-
 <h2>🌱</h2>
-
 <p>Better Farming</p>
-
 </div>
-
 
 <div class="stat">
-
 <h2>⭐</h2>
-
 <p>Trusted Quality</p>
-
 </div>
-
 
 </section>
-
-
-
 
 <!-- CONTACT -->
 
 <section id="contact" class="contact">
 
-
 <h2 class="title">
 Contact <span>Us</span>
 </h2>
-
-
 
 <h3>📍 Farm Location 1</h3>
 
@@ -454,400 +334,57 @@ Chak Fifty-Four Twelve Left,<br>
 Chichawatni, Pakistan
 </p>
 
-
 <br>
-
 
 <a class="btn green"
 href="https://maps.app.goo.gl/bFPPsgF7C4N42XxK7?g_st=ic"
 target="_blank">
-
 🗺 View Google Maps
-
 </a>
-
-
 
 <br><br><br>
 
-
-
 <h3>📍 Farm Location 2</h3>
-
 
 <p>
 Chak Fifty-Five A-Twelve Left,<br>
 Chichawatni, Pakistan
 </p>
 
-
 <br>
-
 
 <a class="btn green"
 href="https://maps.app.goo.gl/F4iGsVuqF9tVZ6rd7?g_st=ic"
 target="_blank">
-
 🗺 View Google Maps
-
 </a>
 
-
-
 <br><br>
-
 
 <a class="btn"
 style="background:#d93025;color:white"
 href="mailto:Ch.muzammil.20rk@gmail.com">
-
 📧 Email Us
-
 </a>
-
-
 
 <a class="btn"
 style="background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);color:white"
 href="https://www.instagram.com/ch_muzammil.20rk"
 target="_blank">
-
 📷 Instagram
-
 </a>
-
-
 
 </section>
 
-
-
-
-<!-- FOOTER -->
-
 <footer>
 
-<h3 class="gold-text">
-Virk Zarai Farm
-</h3>
-
-<p>
-Growing Quality • Harvesting Trust
-</p>
-
-<p>
-© 2026 Virk Zarai Farm
-</p>
-
-</footer>
-
-
-
-</body>
-
-</html>
-
-<div class="hero" id="home">
-
-<h2>Virk Zarai Farm</h2>
+<h3 class="gold-text">Virk Zarai Farm</h3>
 
 <p>Growing Quality • Harvesting Trust</p>
 
-
-<a class="btn gold" href="#gallery">
-Explore Farm
-</a>
-
-
-<a class="btn green" href="#contact">
-Contact Us
-</a>
-
-</div>
-
-
-
-
-<!-- GALLERY -->
-
-<section id="gallery">
-
-<h2 class="title">
-Farm <span>Gallery</span>
-</h2>
-
-
-<div class="gallery">
-
-
-<img src="farm1.jpg" alt="Farm Image">
-
-<img src="farm2.JPG" alt="Farm Image">
-
-<img src="farm3.JPG" alt="Farm Image">
-
-<img src="farm4.jpg" alt="Farm Image">
-
-<img src="farm5.jpg" alt="Farm Image">
-
-<img src="farm6.JPG" alt="Farm Image">
-
-
-</div>
-
-
-</section>
-
-
-
-<!-- FARM SERVICES -->
-
-<section id="services">
-
-<h2 class="title">
-Our <span>Services</span>
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>🌾 Crop Production</h3>
-
-<p>
-Quality crop cultivation with proper care and modern techniques.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>🚜 Modern Agriculture</h3>
-
-<p>
-Using improved farming methods for better results and productivity.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>🌱 Healthy Farming</h3>
-
-<p>
-Focused on clean, quality and sustainable agricultural practices.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>⭐ Farm Management</h3>
-
-<p>
-Professional planning and attention at every stage of farming.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-<!-- ABOUT SECTION -->
-
-<section id="about">
-
-<h2 class="title">
-About <span>Our Farm</span>
-</h2>
-
-
-<p style="
-text-align:center;
-max-width:900px;
-margin:auto;
-font-size:19px;
-line-height:2;
-">
-
-Welcome to <b>Virk Zarai Farm</b>.  
-We are committed to producing healthy and high-quality crops through modern farming practices.
-Our mission is to provide quality agricultural products while maintaining honesty,
-hard work and sustainable farming methods.
-
-</p>
-
-</section>
-
-
-
-
-<!-- FARM HIGHLIGHTS -->
-
-<section class="stats">
-
-
-<div class="stat">
-
-<h2>🌾</h2>
-
-<p>Quality Crops</p>
-
-</div>
-
-
-<div class="stat">
-
-<h2>🚜</h2>
-
-<p>Modern Equipment</p>
-
-</div>
-
-
-<div class="stat">
-
-<h2>🌱</h2>
-
-<p>Better Farming</p>
-
-</div>
-
-
-<div class="stat">
-
-<h2>⭐</h2>
-
-<p>Trusted Quality</p>
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-
-<h2 class="title">
-Contact <span>Us</span>
-</h2>
-
-
-
-<h3>📍 Farm Location 1</h3>
-
-<p>
-Chak Fifty-Four Twelve Left,<br>
-Chichawatni, Pakistan
-</p>
-
-
-<br>
-
-
-<a class="btn green"
-href="https://maps.app.goo.gl/bFPPsgF7C4N42XxK7?g_st=ic"
-target="_blank">
-
-🗺 View Google Maps
-
-</a>
-
-
-
-<br><br><br>
-
-
-
-<h3>📍 Farm Location 2</h3>
-
-
-<p>
-Chak Fifty-Five A-Twelve Left,<br>
-Chichawatni, Pakistan
-</p>
-
-
-<br>
-
-
-<a class="btn green"
-href="https://maps.app.goo.gl/F4iGsVuqF9tVZ6rd7?g_st=ic"
-target="_blank">
-
-🗺 View Google Maps
-
-</a>
-
-
-
-<br><br>
-
-
-<a class="btn"
-style="background:#d93025;color:white"
-href="mailto:Ch.muzammil.20rk@gmail.com">
-
-📧 Email Us
-
-</a>
-
-
-
-<a class="btn"
-style="background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);color:white"
-href="https://www.instagram.com/ch_muzammil.20rk"
-target="_blank">
-
-📷 Instagram
-
-</a>
-
-
-
-</section>
-
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<h3 class="gold-text">
-Virk Zarai Farm
-</h3>
-
-<p>
-Growing Quality • Harvesting Trust
-</p>
-
-<p>
-© 2026 Virk Zarai Farm
-</p>
+<p>© 2026 Virk Zarai Farm</p>
 
 </footer>
 
-
-
 </body>
-
 </html>
